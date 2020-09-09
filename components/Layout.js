@@ -7,6 +7,7 @@ const name = 'Pablo Maurig'
 export const siteTitle = 'Primer blog con Next.js'
 
 export default function Layout({ children, home }) {
+  //
   return (
     <div className={styles.container}>
       <Head>
