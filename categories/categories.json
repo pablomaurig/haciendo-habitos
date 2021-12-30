@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "next-js",
+    "name": "Next js"
+  },
+  {
+    "slug": "ssg",
+    "name": "Server-side Rendering"
+  },
+  {
+    "slug": "static-generation",
+    "name": "Static Generation"
+  },
+  {
+    "slug": "pre-rendering",
+    "name": "Pre-rendering"
+  }
+]

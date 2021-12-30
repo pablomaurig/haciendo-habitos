@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
@@ -6,7 +7,10 @@ import Link from 'next/link'
 const name = 'Pablo Maurig'
 export const siteTitle = 'Primer blog con Next.js'
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home }: {
+  children: React.ReactNode
+  home?: boolean
+}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -27,9 +31,13 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <img
+            <Image
+              priority
               src="/images/profile.png"
               className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
+              // className={utilStyles.borderCircle}
+              height={144}
+              width={144}
               alt={name}
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
@@ -38,9 +46,12 @@ export default function Layout({ children, home }) {
             <>
               <Link href="/">
                 <a>
-                  <img
+                  <Image
+                    priority
                     src="/images/profile.png"
                     className={`${styles.headerImage} ${utilStyles.borderCircle}`}
+                    height={108}
+                    width={108}
                     alt={name}
                   />
                 </a>
